@@ -1,0 +1,22 @@
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+p,a,span,li,label{
+	font-family: 'Open Sans', sans-serif;
+}
+img{
+	max-width:100%;
+}
+nav li{
+	    margin: 0 13px;
+}
+
+#intro .jumbotron{
+	background: url('../img/bg2.png');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 35vh;
+    margin-bottom: 0px;
+}
+

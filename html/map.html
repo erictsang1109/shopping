@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+	
+     <body>
+
+      <h1>My First Google Map</h1>
+
+      <div class="container" v-if="menu==1">
+				<div class="row">
+					<div class="col">
+            <div id="googleMap" style="width:100%;height:400px;"></div>
+
+                  <script>
+                  function myMap() {
+                  var mapProp= {
+                    center:new google.maps.LatLng(51.508742,-0.120850),
+                    zoom:5,
+                  };
+                  var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                  }
+                  </script>
+
+                  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABC3q1NYqH9yfb_6q7k-i5AWYiixjgre0&callback=myMap"></script>
+
+                  <script>
+      
+
+  function makeRequest() {
+    xhr = new XMLHttpRequest();
+    xhr.onload= function() {
+      var response = JSON.parse(this.responseText);
+    var city = response.city.name + ", " + response.city.country;
+    var weatherTitle = response.list[0].weather[0].main;
+    var temp = response.list[0].main.temp + "°";
+
+    var weatherContainer = document.querySelector("#weather");
+    weatherContainer.innerHTML = city + "<br/>" + weatherTitle + "<br/>" + temp;
+  };
+    xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?q=Taipei,tw&APPID=9c39fa3ce9d953fdd507d7d9f77093ef&lang=zh_tw&units=metric', true )  
+    xhr.send()
+    }
+    makeRequest();
+</script>
+
+
+
+<div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hong%20knog&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2torrentz.net"></a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+
+
+
+</body>
+</html>

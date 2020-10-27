@@ -1,0 +1,43 @@
+.goods-div {
+	float: left;
+	width: 200px;
+	height: 260px;
+	border: 1px solid #f4f4f4;
+	margin-left: 5px;
+	margin-left: 5px;
+}
+
+.goods-div-img {
+	width: 200px;
+	height: 185px;
+	float: left;
+}
+
+.goods-div-name {
+	text-align: center;
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	font-size: 12px;
+	font-weight: 400;
+	color: #333;
+}
+.goods-div-price
+{
+	text-align: center;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+	background-color: #e1251b;
+}
+.goods-div-add
+{
+	color: royalblue;
+	cursor: pointer;
+}
+
